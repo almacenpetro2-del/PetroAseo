@@ -1,0 +1,91 @@
+/**
+ * Reglas responsive mobile-first complementarias.
+ */
+
+@media (max-width: 900px) {
+  /**
+   * Solo la columna principal ocupa el alto; sidebar sigue en overlay fijo.
+   */
+  body.app-body {
+    flex-direction: column;
+  }
+
+  .app-main {
+    flex: 1 1 auto;
+    min-height: 0;
+    width: 100%;
+    max-height: 100vh;
+    max-height: 100dvh;
+  }
+
+  .sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: var(--sidebar-width, 260px);
+    height: auto;
+    max-height: none;
+    z-index: 10000;
+    transform: translateX(-105%);
+    box-shadow: 8px 0 24px rgba(0, 0, 0, 0.2);
+  }
+
+  .sidebar.sidebar--open {
+    transform: translateX(0);
+  }
+
+  .fab-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .topbar {
+    padding-left: 4rem;
+  }
+
+  .spa-view {
+    padding: 0.85rem;
+  }
+
+  .filters-bar {
+    grid-template-columns: 1fr;
+  }
+
+  .indicadores-row-3 {
+    grid-template-columns: 1fr;
+  }
+
+  .indicadores-row-split {
+    grid-template-columns: 1fr;
+  }
+
+  .flota-camiones-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .flota-charts-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 520px) {
+  .topbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .data-table {
+    font-size: 0.72rem;
+  }
+
+  .chart-card--epp-ind__plot {
+    height: 240px;
+    min-height: 200px;
+  }
+
+  .chart-card--epp-ind__title {
+    font-size: 0.76rem;
+  }
+}

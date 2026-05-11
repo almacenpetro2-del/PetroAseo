@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PETRO ASEO — PANEL</title>
+  <link rel="stylesheet" href="css/dashboard.css" />
+  <link rel="stylesheet" href="css/mantenimientos.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.6/dist/chart.umd.min.js"></script>
+  <script src="https://cdn.sheetjs.com/xlsx-0.20.2/package/dist/xlsx.full.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/pdfjs-dist@3.11.174/build/pdf.min.js"></script>
+  <script>
+    if (window.pdfjsLib) {
+      window.pdfjsLib.GlobalWorkerOptions.workerSrc =
+        'https://cdn.jsdelivr.net/npm/pdfjs-dist@3.11.174/build/pdf.worker.min.js';
+    }
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/pdf-lib@1.17.1/dist/pdf-lib.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mammoth@1.7.0/mammoth.browser.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+</head>
+<body class="app-body">
+  <button type="button" class="fab-nav" id="btn-sidebar-toggle" aria-label="ABRIR MENÚ">☰</button>
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar__brand">
+      <span class="sidebar__icono" aria-hidden="true">P</span>
+      <p class="sidebar__petro"><span class="brand-rojo">PETRO</span><span class="brand-blanco">ASEO</span></p>
+      <p class="sidebar__version js-app-version">VERSIÓN 1.0</p>
+    </div>
+    <nav class="sidebar__nav" aria-label="MÓDULOS">
+      <a data-module="usuarios" data-hash href="#/usuarios" class="nav-link nav-hidden">&#x1F465; USUARIOS</a>
+
+      <a data-module="logistica" data-hash href="#/logistica" class="nav-link nav-hidden">&#x1F4E6; LOGÍSTICA</a>
+      <a data-module="rrhh" data-hash href="#/rrhh" class="nav-link nav-hidden">&#x1F465; RECURSOS HUMANOS</a>
+      <a data-module="operaciones" data-hash href="#/operaciones" class="nav-link nav-hidden">&#x2699;&#xFE0F; OPERACIONES</a>
+      <a data-module="indicadores" data-hash href="#/indicadores" class="nav-link nav-hidden">&#x1F4CA; INDICADORES</a>
+    </nav>
+  </aside>
+
+  <div class="app-main">
+    <header class="topbar">
+      <div class="topbar__user" id="header-user-name"><span class="topbar__icono">&#x1F464;</span> USUARIO</div>
+      <button type="button" class="btn btn-danger btn-sm" id="btn-logout">&#x1F6AA; CERRAR SESIÓN</button>
+    </header>
+    <main id="spa-view" class="spa-view" tabindex="-1"></main>
+  </div>
+
+  <script type="module" src="js/dashboard-main.js"></script>
+</body>
+</html>

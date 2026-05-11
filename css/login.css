@@ -1,0 +1,164 @@
+/**
+ * Estilos pantalla de login — paleta Petro Aseo.
+ */
+
+:root {
+  --rojo: #ff0000;
+  --negro: #000000;
+  --blanco: #ffffff;
+  --azul: #1a1a2e;
+  --plomo: #d3d3d3;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.login-body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background: var(--plomo);
+  color: var(--negro);
+}
+
+.login-shell {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.25rem;
+}
+
+.login-card {
+  width: min(420px, 100%);
+  background: var(--azul);
+  color: var(--blanco);
+  border-radius: 12px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+  border: 2px solid var(--rojo);
+}
+
+.login-card__header {
+  text-align: center;
+  padding: 1.5rem 1.25rem 0.5rem;
+}
+
+.login-icono {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  font-size: 2rem;
+  font-weight: 900;
+  color: var(--blanco);
+  background: linear-gradient(135deg, var(--rojo), #cc0000);
+  border-radius: 50%;
+  box-shadow: 0 4px 15px rgba(255, 0, 0, 0.4);
+  margin-bottom: 0.5rem;
+}
+
+.brand-title {
+  margin: 0;
+  font-size: 1.75rem;
+  letter-spacing: 0.06em;
+}
+.brand-rojo {
+  color: var(--rojo);
+}
+.brand-blanco {
+  color: var(--blanco);
+}
+
+.login-form {
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background: var(--blanco);
+  color: var(--negro);
+}
+
+.field__label {
+  display: block;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  margin-bottom: 0.35rem;
+  color: var(--negro);
+}
+
+.field__control {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  border: 2px solid var(--rojo);
+  border-radius: 8px;
+  padding: 0.35rem 0.5rem;
+  background: var(--blanco);
+}
+
+.field__control:focus-within {
+  outline: 2px solid var(--azul);
+  outline-offset: 2px;
+}
+
+.field__icon {
+  opacity: 0.85;
+}
+
+.field__control input {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  background: transparent;
+  color: var(--negro);
+  text-transform: uppercase;
+}
+
+.field__eye {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: 1.1rem;
+  line-height: 1;
+}
+
+.btn {
+  font-family: inherit;
+  cursor: pointer;
+  border-radius: 8px;
+  border: 2px solid transparent;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.btn-login {
+  margin-top: 0.25rem;
+  padding: 0.85rem 1rem;
+  background: var(--rojo);
+  color: var(--blanco);
+  border-color: var(--rojo);
+}
+
+.btn-login:hover {
+  filter: brightness(1.05);
+}
+
+.login-card__footer {
+  text-align: center;
+  padding: 0.85rem 1rem 1.25rem;
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  color: var(--blanco);
+}
+
+.input-upper {
+  text-transform: uppercase;
+}

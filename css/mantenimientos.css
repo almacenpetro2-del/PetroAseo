@@ -1,0 +1,353 @@
+/**
+ * Submódulo MANTENIMIENTOS (operaciones) — layout y componentes propios.
+ */
+
+.mant-modulo {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.mant-modulo .data-table thead th {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+.ind-mant-section {
+  margin-bottom: 1rem;
+}
+
+.ind-mant-charts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 0.85rem;
+}
+
+.ind-mant-charts .mant-chart-card {
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 10px;
+  padding: 0.65rem;
+  min-height: 280px;
+}
+
+.ind-mant-charts .mant-chart-card h4 {
+  margin: 0 0 0.45rem;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+}
+
+.mant-section {
+  background: var(--blanco, #fff);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-top: 4px solid #ff0000;
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 6px 22px rgba(0, 0, 0, 0.08);
+}
+
+.mant-section__title {
+  margin: 0 0 0.85rem;
+  font-size: 0.95rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  color: var(--azul, #1a1a2e);
+  text-transform: uppercase;
+  border-bottom: 2px solid #ff0000;
+  padding-bottom: 0.35rem;
+}
+
+.mant-kpi-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.mant-kpi {
+  border: 2px solid #1a1a2e;
+  border-radius: 10px;
+  padding: 0.85rem;
+  background: #fff;
+}
+
+.mant-kpi--alert {
+  border-color: #ff0000;
+}
+
+.mant-kpi__lbl {
+  display: block;
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  margin-bottom: 0.35rem;
+}
+
+.mant-kpi__val {
+  font-size: 1.35rem;
+  font-weight: 800;
+}
+
+.mant-charts-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 0.85rem;
+}
+
+.mant-chart-card {
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 10px;
+  padding: 0.75rem;
+  min-height: 260px;
+  display: flex;
+  flex-direction: column;
+}
+
+.mant-chart-card h4 {
+  margin: 0 0 0.5rem;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.mant-chart-wrap {
+  position: relative;
+  flex: 1;
+  min-height: 220px;
+}
+
+.mant-chart-wrap canvas {
+  display: block;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.mant-btn-programar {
+  width: 100%;
+  margin-bottom: 0.75rem;
+  padding: 0.85rem 1rem;
+  font-size: 0.9rem;
+}
+
+.mant-form-equipo {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  align-items: flex-end;
+  margin-bottom: 1rem;
+}
+
+.mant-form-equipo label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  min-width: 140px;
+  flex: 1;
+}
+
+.mant-form-equipo .mant-form-equipo__actions {
+  flex: 100%;
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.mant-plan-editor {
+  border: 2px dashed rgba(26, 26, 46, 0.25);
+  border-radius: 10px;
+  padding: 1rem;
+  margin-top: 0.75rem;
+}
+
+.mant-plan-editor.is-disabled {
+  opacity: 0.55;
+  pointer-events: none;
+}
+
+.mant-plan-titulo label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.75rem;
+}
+
+.mant-plan-titulo input {
+  text-transform: uppercase;
+}
+
+.mant-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.mant-toolbar .input-upper,
+.mant-toolbar input,
+.mant-toolbar select {
+  min-width: 140px;
+}
+
+.mant-correctivos-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.mant-table-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+
+.mant-icon-btn {
+  font-size: 1rem;
+  line-height: 1;
+  padding: 0.25rem 0.45rem;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.mant-readonly-banner {
+  padding: 0.5rem 0.75rem;
+  background: #f5f5f5;
+  border-left: 4px solid #1a1a2e;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.75rem;
+  text-transform: uppercase;
+}
+
+.mant-modal {
+  border: 2px solid #ff0000;
+  border-radius: 12px;
+  padding: 0;
+  max-width: min(640px, 100%);
+  width: 100%;
+}
+
+.mant-modal::backdrop {
+  background: rgba(0, 0, 0, 0.45);
+}
+
+.mant-modal__inner {
+  padding: 1rem;
+  max-height: min(90vh, 720px);
+  overflow-y: auto;
+}
+
+.mant-modal__title {
+  margin: 0 0 0.75rem;
+  font-size: 1rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #1a1a2e;
+}
+
+.mant-modal__grid label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.65rem;
+}
+
+.mant-modal__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: flex-end;
+  margin-top: 1rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid #e0e0e0;
+}
+
+.mant-rep-rows {
+  margin-top: 0.75rem;
+  padding: 0.75rem;
+  background: #fafafa;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+.mant-rep-rows h5 {
+  margin: 0 0 0.5rem;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+}
+
+.mant-rep-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: flex-end;
+  margin-bottom: 0.5rem;
+}
+
+.mant-rep-row label {
+  flex: 1;
+  min-width: 160px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  font-size: 0.65rem;
+  font-weight: 800;
+}
+
+.mant-expand-row td {
+  background: #fafafa;
+  font-size: 0.72rem;
+}
+
+.mant-subtable {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 0.35rem;
+}
+
+.mant-subtable th,
+.mant-subtable td {
+  border: 1px solid #1a1a2e;
+  padding: 0.35rem;
+  text-transform: uppercase;
+  font-size: 0.7rem;
+}
+
+@media (max-width: 767px) {
+  .mant-form-equipo {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .mant-form-equipo label {
+    min-width: 100%;
+  }
+
+  .mant-correctivos-actions,
+  .mant-toolbar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .mant-correctivos-actions .btn,
+  .mant-toolbar .btn {
+    width: 100%;
+  }
+}

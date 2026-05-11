@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PETRO ASEO — ACCESO</title>
+  <link rel="stylesheet" href="css/login.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body class="login-body">
+  <main class="login-shell">
+    <section class="login-card" aria-labelledby="login-title">
+      <header class="login-card__header">
+        <span class="login-icono" aria-hidden="true">P</span>
+        <h1 id="login-title" class="brand-title"><span class="brand-rojo">PETRO</span><span class="brand-blanco">ASEO</span></h1>
+      </header>
+      <form id="form-login" class="login-form" autocomplete="on">
+        <label class="field">
+          <span class="field__label">USUARIO</span>
+          <span class="field__control field__control--icon">
+            <span class="field__icon" aria-hidden="true">👤</span>
+            <input id="usuario" name="usuario" type="email" inputmode="email" placeholder="CORREO@EJEMPLO.COM" required />
+          </span>
+        </label>
+        <label class="field">
+          <span class="field__label">CONTRASEÑA</span>
+          <span class="field__control field__control--icon">
+            <span class="field__icon" aria-hidden="true">🔒</span>
+            <input id="password" name="password" type="password" placeholder="••••••••" required />
+            <button type="button" class="field__eye" id="toggle-password" aria-label="MOSTRAR CONTRASEÑA">👁</button>
+          </span>
+        </label>
+        <button type="submit" class="btn btn-login">INICIAR SESIÓN</button>
+      </form>
+      <footer class="login-card__footer">DERECHOS RESERVADOS A PETRO ASEO</footer>
+    </section>
+  </main>
+  <script type="module" src="js/login-main.js"></script>
+</body>
+</html>
